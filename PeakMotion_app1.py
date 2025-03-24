@@ -24,7 +24,7 @@ st.title("Football Player Physical Performance Dashboard")
 
 # Line chart of performance over time
 st.subheader(f"Performance Trend for {movement} - {quality} - {expression}")
-fig = px.line(df_filtered, x="Date", y="Score", title="Performance Score Over Time")
+fig = px.line(df_filtered, x="testDate", y="Score", title="Performance Score Over Time")
 st.plotly_chart(fig)
 
 # Benchmark comparison
