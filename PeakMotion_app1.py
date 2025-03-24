@@ -30,7 +30,7 @@ st.plotly_chart(fig)
 # Benchmark comparison
 if "BenchmarkPct" in df_filtered.columns:
     st.subheader("Benchmark Comparison")
-    fig_bench = px.line(df_filtered, x="Date", y="benchmarkPct", title="Benchmark Percentage Over Time")
+    fig_bench = px.line(df_filtered, x="testDate", y="benchmarkPct", title="Benchmark Percentage Over Time")
     st.plotly_chart(fig_bench)
 
 # Show data table
