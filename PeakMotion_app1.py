@@ -22,11 +22,6 @@ df_filtered = df[(df["movement"] == movement) & (df["quality"] == quality) & (df
 # Title
 st.title("Football Player Physical Performance Dashboard")
 
-# Line chart of performance over time
-st.subheader(f"Performance Trend for {movement} - {quality} - {expression}")
-fig = px.line(df_filtered, x="testDate", y="Score", title="Performance Score Over Time")
-st.plotly_chart(fig)
-
 # Benchmark comparison
 if "BenchmarkPct" in df_filtered.columns:
     st.subheader("Benchmark Comparison")
