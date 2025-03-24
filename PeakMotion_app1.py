@@ -12,12 +12,12 @@ df = load_data()
 
 # Sidebar filters
 st.sidebar.header("Filters")
-movement = st.sidebar.selectbox("Select Movement", df["MOVEMENT"].unique())
-quality = st.sidebar.selectbox("Select Quality", df["QUALITY"].unique())
-expression = st.sidebar.selectbox("Select Expression", df["EXPRESSION"].unique())
+movement = st.sidebar.selectbox("Select Movement", df["movement"].unique())
+quality = st.sidebar.selectbox("Select Quality", df["quality"].unique())
+expression = st.sidebar.selectbox("Select Expression", df["expression"].unique())
 
 # Filter data
-df_filtered = df[(df["MOVEMENT"] == movement) & (df["QUALITY"] == quality) & (df["EXPRESSION"] == expression)]
+df_filtered = df[(df["movement"] == movement) & (df["quality"] == quality) & (df["expression"] == expression)]
 
 # Title
 st.title("Football Player Physical Performance Dashboard")
@@ -30,7 +30,7 @@ st.plotly_chart(fig)
 # Benchmark comparison
 if "BenchmarkPct" in df_filtered.columns:
     st.subheader("Benchmark Comparison")
-    fig_bench = px.line(df_filtered, x="Date", y="BenchmarkPct", title="Benchmark Percentage Over Time")
+    fig_bench = px.line(df_filtered, x="Date", y="benchmarkPct", title="Benchmark Percentage Over Time")
     st.plotly_chart(fig_bench)
 
 # Show data table
