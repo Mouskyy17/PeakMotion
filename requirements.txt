@@ -1,4 +1,22 @@
-pandas
-plotly 
-io
-datetime 
+# Core Streamlit dependencies
+streamlit>=1.28.0
+
+# Data manipulation and analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data visualization
+plotly>=5.15.0
+
+# Date and time handling
+python-dateutil>=2.8.0
+
+# Optional: For better performance with large datasets
+pyarrow>=12.0.0
+
+# Optional: For additional data processing capabilities
+scipy>=1.10.0
+
+# Optional: For enhanced styling and UI components
+streamlit-option-menu>=0.3.6
+streamlit-aggrid>=0.3.4
