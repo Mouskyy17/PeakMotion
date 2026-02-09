@@ -3,7 +3,7 @@ run-name: ${{github.actor}} is testing Hello function
 on: [push, pull_request]
 jobs:
   execute Hello function:
-  runs-on: ubuntu-latest
-  steps:
-    - run: pip install python
-    - run: py hello.py
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install python
+      - run: py hello.py
