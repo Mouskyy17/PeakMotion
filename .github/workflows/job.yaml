@@ -1,5 +1,5 @@
 name: Test Hello function
-run: ${{github.actor}} is testing Hello function
+run-name: ${{github.actor}} is testing Hello function
 on: [push, pull_request]
 jobs:
   execute Hello function:
